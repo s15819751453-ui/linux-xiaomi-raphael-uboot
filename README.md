@@ -47,11 +47,11 @@
 
 ### Phosh 桌面变体
 
-- `phosh-core`：轻量基础环境，仅保留核心桌面组件
+- `phosh-core`：基础 Phosh 环境
 
-- `phosh-full`：完整桌面环境（默认），内置 GNOME 设置、全套系统工具
+- `phosh-full`：完整的 Phosh 环境
 
-- `phosh-phone`：手机专属优化，适配移动设备通话与触控逻辑
+- `phosh-phone`：手机优化的 Phosh 环境
 
 ## 🚀 快速上手
 
@@ -76,11 +76,11 @@
 
     - **系统类型**：支持多类型逗号分隔，默认全量构建
 
-    - **内核版本**：支持 `6.18,7.0` 双版本（默认）
+    - **内核版本**：支持 `7.0`（默认7.0可选6.18）
 
     - **构建工具**：`mmdebstrap`（默认） / `debootstrap`
 
-    - **Phosh 变体**：仅 Phosh 桌面镜像生效，默认`phosh-full`
+    - **Phosh 变体**：仅 Phosh 桌面镜像生效，默认`phosh-core`
 
     - **系统版本**：默认 Debian: trixie、Ubuntu: resolute
 
