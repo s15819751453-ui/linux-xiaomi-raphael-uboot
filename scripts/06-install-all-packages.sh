@@ -79,20 +79,7 @@ if [[ "$SYSTEM_TYPE" == *"debian-"* ]]; then
 fi
 
 # 修改服务配置
-if [[ "$SYSTEM_TYPE" == *"debian-"* ]]; then
-    sed -i '/ConditionKernelVersion/d' rootdir/lib/systemd/system/pd-mapper.service 2>/dev/null || true
-fi
-
-if [[ "$SYSTEM_TYPE" != *"server"* ]]; then
-    if [ "$DESKTOP_ENV" = "gnome" ]; then
-        echo "[$(date +'%Y-%m-%d %H:%M:%S')] [06]   └─ 配置 GDM 自动登录"
-        cat > rootdir/etc/gdm3/custom.conf << 'EOF'
-[daemon]
-AutomaticLoginEnable=true
-AutomaticLogin=user
-EOF
-    fi
-fi
+sed -i '/ConditionKernelVersion/d' rootdir/lib/systemd/system/pd-mapper.service 2>/dev/null || true
 
 if [ -f "alsa-xiaomi-raphael.deb" ]; then
     echo "[$(date +'%Y-%m-%d %H:%M:%S')] [06]   └─ 安装 ALSA 配置"
